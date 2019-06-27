@@ -1,0 +1,85 @@
+@charset "UTF-8";
+/*常规模块*/
+body,
+div,
+header,
+section,
+footer,
+span,
+img,
+ul,
+li,
+ol,
+p,
+a,
+button,
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0; }
+  body::selection,
+  div::selection,
+  header::selection,
+  section::selection,
+  footer::selection,
+  span::selection,
+  img::selection,
+  ul::selection,
+  li::selection,
+  ol::selection,
+  p::selection,
+  a::selection,
+  button::selection,
+  h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection {
+    background: transparent; }
+
+body {
+  overflow-x: hidden; }
+
+span,
+h1, h2, h3, h4, h5, h6, p, article {
+  cursor: default; }
+
+button {
+  border: none;
+  outline: none; }
+
+input, textarea {
+  outline: none; }
+
+.section-font {
+  font-size: 1.5rem;
+  color: #666; }
+  .section-font .font-item {
+    width: 80%;
+    margin: 2rem auto;
+    line-height: 3rem; }
+
+.section-footer {
+  width: 80%;
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 3rem auto;
+  justify-content: space-around; }
+  .section-footer .footer-form {
+    width: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: flex-start; }
+    .section-footer .footer-form .item, .section-footer .footer-form .btn {
+      border-radius: 1rem;
+      padding: 1rem;
+      box-sizing: border-box; }
+    .section-footer .footer-form .item {
+      width: 100%;
+      height: 10%; }
+    .section-footer .footer-form textarea.item {
+      height: 40%; }
+    .section-footer .footer-form .btn {
+      width: 30%;
+      height: 15%;
+      font-size: 1rem;
+      background: transparent;
+      border: 0.5px solid #ccc; }
+      .section-footer .footer-form .btn:hover {
+        background: #ccc; }

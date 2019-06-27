@@ -1,0 +1,59 @@
+$aside-background:rgba(0,0,0,0.1);
+.aside{
+    width:5vw;
+    padding:0.5rem;
+    position: fixed;
+    right: 0;
+    bottom:0;
+    display: flex;
+    flex-flow: column nowrap;
+    background: $aside-background;
+    .top,.wechat,.qq{
+        width: 100%;
+        height:10vh;
+        margin-bottom:1vh;
+        background:url("../img/aside/aside.PNG") no-repeat;
+        background-size: 100%;
+        cursor: pointer;
+    }
+    .top{
+        height: 0;
+        margin:0; 
+        opacity: 0;
+        background-position:0% 0%;
+        transition: 0.5s;
+    }
+    .top.active{
+        height:10vh;
+        margin-bottom:1vh;
+        opacity: 100;
+    }
+    .wechat{
+        position: relative;
+        background-position:0% 50%;
+        cursor: default;
+        .erweima{
+            display:none;
+        }
+        &:hover{
+            .erweima{
+                padding: 0.2rem;
+                width:8vw;
+                display: block;
+                background: $aside-background;
+                position: absolute;
+                right: 5vw;
+                bottom: 0;
+                display: flex;
+                flex-flow: column nowrap;
+                .img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .qq{
+        margin: 0;
+        background-position:0% 100%;
+    }
+}

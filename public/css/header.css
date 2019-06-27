@@ -1,0 +1,182 @@
+@charset "UTF-8";
+body,
+div,
+header,
+section,
+footer,
+span,
+img,
+ul,
+li,
+ol,
+p,
+a,
+button,
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0; }
+  body::selection,
+  div::selection,
+  header::selection,
+  section::selection,
+  footer::selection,
+  span::selection,
+  img::selection,
+  ul::selection,
+  li::selection,
+  ol::selection,
+  p::selection,
+  a::selection,
+  button::selection,
+  h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection {
+    background: transparent; }
+
+body {
+  overflow-x: hidden; }
+
+span,
+h1, h2, h3, h4, h5, h6, p, article {
+  cursor: default; }
+
+button {
+  border: none;
+  outline: none; }
+
+input, textarea {
+  outline: none; }
+
+.double {
+  width: 100%;
+  white-space: nowrap;
+  background: #fff; }
+  .double .first-row {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; }
+    .double .first-row .logo {
+      width: 30%;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center; }
+      .double .first-row .logo img {
+        width: 40%; }
+      .double .first-row .logo .logo-font {
+        font: 2.1rem "Cooper Black", 微软雅黑; }
+    .double .first-row .contact {
+      width: 60%;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between; }
+      .double .first-row .contact .phone, .double .first-row .contact .email, .double .first-row .contact .address {
+        width: 30%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center; }
+        .double .first-row .contact .phone .img, .double .first-row .contact .email .img, .double .first-row .contact .address .img {
+          width: 3rem;
+          height: 3.5rem;
+          border-radius: 50%;
+          background: url("../img/header/header_img.jpg") no-repeat 0% 0%;
+          background-size: 9.5rem;
+          transform: scale(1.2); }
+        .double .first-row .contact .phone .font, .double .first-row .contact .email .font, .double .first-row .contact .address .font {
+          width: 50%;
+          display: flex;
+          flex-flow: column wrap;
+          color: #666;
+          justify-content: center;
+          align-items: flex-start; }
+      .double .first-row .contact .phone .img {
+        background-position: 25% 50%; }
+      .double .first-row .contact .email .img {
+        background-position: 70% 15%; }
+      .double .first-row .contact .address .img {
+        background-position: 70% 50%; }
+  .double .second-row {
+    padding: 0 10%;
+    background: rgba(96, 96, 96, 0.3); }
+    .double .second-row .nav {
+      width: 100%;
+      height: 100%;
+      list-style: none;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: stretch; }
+      .double .second-row .nav li {
+        width: 20%; }
+        .double .second-row .nav li a {
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          text-decoration: none;
+          font-size: 1.5rem;
+          line-height: 4rem;
+          text-align: center;
+          color: #000; }
+        .double .second-row .nav li:hover {
+          background: #666; }
+          .double .second-row .nav li:hover a {
+            color: #fff; }
+  .double.only {
+    z-index: 15;
+    padding: 0 10%;
+    display: flex;
+    flex-flow: row nowrap;
+    background: rgba(243, 239, 239, 0.8);
+    opacity: 0.3;
+    box-sizing: border-box; }
+    .double.only .first-row {
+      width: 20%;
+      margin: 0; }
+      .double.only .first-row .logo img {
+        width: 100%; }
+      .double.only .first-row .logo .logo-font {
+        font-size: 1.5rem;
+        cursor: pointer; }
+      .double.only .first-row .contact {
+        display: none; }
+    .double.only .second-row {
+      padding: 0;
+      width: 80%;
+      background: transparent; }
+    .double.only:hover {
+      opacity: 1; }
+  .double.normal {
+    opacity: 1;
+    background: #f3efef; }
+    .double.normal .first-row .logo .logo-font {
+      cursor: default; }
+  .double.fixed {
+    position: fixed;
+    z-index: 15; }
+
+/*网页主体头部文字*/
+.section-header {
+  width: 100%;
+  height: 50vh;
+  position: relative; }
+  .section-header .section-header-img, .section-header .section-header-div {
+    width: 100%;
+    height: 100%; }
+  .section-header .section-header-div {
+    position: absolute;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+    top: 0; }
+    .section-header .section-header-div .section-header-title, .section-header .section-header-div .section-header-font {
+      color: #000; }
+    .section-header .section-header-div .section-header-title {
+      font-size: 2.5rem;
+      font-weight: bold; }
+    .section-header .section-header-div .section-header-font {
+      font-size: 1.5rem; }
+      .section-header .section-header-div .section-header-font + .section-header-font::before {
+        content: ">"; }

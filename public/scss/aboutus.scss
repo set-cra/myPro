@@ -1,0 +1,50 @@
+/*常规模块*/
+@import "normal";
+
+$section-font-size:1.5rem!default;
+$color:#666 !default;
+.section-font{
+    font-size: $section-font-size;
+    color: $color;
+    .font-item{
+        width: 80%;
+        margin: 2rem auto;
+        line-height: $section-font-size*2;
+    }
+}
+.section-footer{
+    width: 80%;
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 3rem auto;
+    justify-content: space-around;
+    .footer-form{
+        width: 50%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: flex-start;
+        .item,.btn{
+            border-radius: 1rem;
+            padding:1rem;
+            box-sizing: border-box;
+        }
+        .item{
+            width: 100%;
+            height: 10%;
+        }
+        textarea.item{
+            height: 40%;
+        }
+        .btn{
+            width:30%;
+            height: 15%;
+            font-size: 1rem;
+            background: transparent;
+            border: 0.5px solid #ccc;
+            &:hover{
+                background: #ccc;
+            }
+        }
+    }
+}

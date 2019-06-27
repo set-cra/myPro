@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>课程列表</title>
+    <link rel="stylesheet" href="../css/select_class_and_exam.css">
+    <script src="../js/function.js"></script>
+</head>
+<body>
+    <header id="header"></header>
+    <!-- 网页主体 -->
+    <section>
+        <!-- 头部图片和网页主题 -->
+        <header  class="section-header" data-reference="header-class">
+            <img src="../img/class/f2c2e2ab7e2d0e9960d3e1389a8ab916.jpg" class="section-header-img" alt="背景图">
+            <div class="section-header-div">
+                <span class="section-header-title">课程列表/Class List</span>
+                <div>
+                    <span class="section-header-font">首页</span>
+                    <span class="section-header-font">课程列表</span>
+                </div>
+            </div>
+        </header>
+        <!-- 列表主体 -->
+        <section>
+            <!-- 查询选项卡 -->
+            <header>
+                <div class="container">
+                    <!-- 课程类型下拉列表 -->
+                    <div class="select" data-content="class_type" data-fn="select">
+                        <span data-words="选择课程分类" class="item active">选择课程分类</span>
+                        <div class="option"></div>
+                    </div>
+                    <!-- 课程难度下拉列表 -->
+                    <div class="select" data-content="degree" data-fn="select">
+                        <span data-words="选择课程难度" class="item active">选择课程难度</span>
+                        <div class="option">
+                            <span data-id="1" class="item">一级难度</span>
+                            <span data-id="2" class="item">二级难度</span>
+                            <span data-id="3" class="item">三级难度</span>
+                            <span data-id="4" class="item">四级难度</span>
+                            <span data-id="5" class="item">五级难度</span>
+                        </div>
+                    </div>
+                    <!-- 课程费用下拉列表 -->
+                    <div class="select" data-content="fee" data-fn="select">
+                        <span data-words="选择课程价格" class="item active">选择课程价格</span>
+                        <div class="option">
+                            <span data-id="0" class="item">免费</span>
+                            <span data-id="1" class="item">VIP专享</span>
+                            <span data-id="2" class="item">收费</span>
+                        </div>
+                    </div>
+                    <button data-fn="submit" class="btn sub">搜索</button>
+                    <button data-fn="reset" class="btn reset">重置</button>
+                </div>
+            </header>
+            <!-- 课程列表 -->
+            <section id="classList" data-list="list" class="floor1-section">
+
+            </section>
+            <!-- 页数导航栏 -->
+            <footer id="pageList" class="page-list"></footer>
+        </section>
+    </section>
+    <footer id="footer"></footer>
+    <script src="../js/OLclass.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+@charset "UTF-8";
+/*常规模块*/
+body,
+div,
+header,
+section,
+footer,
+span,
+img,
+ul,
+li,
+ol,
+p,
+a,
+button,
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0; }
+  body::selection,
+  div::selection,
+  header::selection,
+  section::selection,
+  footer::selection,
+  span::selection,
+  img::selection,
+  ul::selection,
+  li::selection,
+  ol::selection,
+  p::selection,
+  a::selection,
+  button::selection,
+  h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection {
+    background: transparent; }
+
+body {
+  overflow-x: hidden; }
+
+span,
+h1, h2, h3, h4, h5, h6, p, article {
+  cursor: default; }
+
+button {
+  border: none;
+  outline: none; }
+
+input, textarea {
+  outline: none; }

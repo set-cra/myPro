@@ -1,0 +1,22 @@
+@charset "UTF-8";
+@import "normal";
+$footer-size:1.5rem;
+$footer-font-family:Calibri,宋体,楷体,微软方正;
+$footer-color:#fff;
+$footer-background:#666;
+.rowbar{
+    width: 100vw;
+    font: $footer-size $footer-font-family;
+    color: $footer-color;
+    white-space: nowrap;
+    background:$footer-background;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    .bar-item{
+        line-height: $footer-size*2.5;
+        + .bar-item::before{
+               content: "|";
+        }
+    }
+}

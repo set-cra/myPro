@@ -1,0 +1,54 @@
+/*常规模块*/
+@import "normal";
+.problem-container{
+    width: 80%;
+    margin:5vh auto;
+    .only,.multi{
+        display: block;
+        font:2rem 宋体 bolder;
+        margin:3vh 0;
+    }
+    hr{
+        border:none;
+        border-bottom: 4px solid aquamarine;
+    }
+    .problem-div{
+        border: 1px solid gray;
+        padding:1rem;
+        &.error{
+            color: red;
+        }
+        .problem-title{
+            font:1.5rem 宋体 blod;
+            white-space: pre-line;
+        }
+        .problem-option{
+            height: 20vh;
+            display: flex;
+            flex-flow: column nowrap;
+            font:1.2rem 宋体 bold;
+            justify-content: space-around;
+        }
+        .problem-answer{
+            white-space: pre-line;
+        }
+    }
+    hr ~ .problem-div{
+        border-top: none;
+    }
+    hr + .problem-div{
+        border: 1px solid gray;
+    }
+    #submit_btn{
+        display: block;
+        margin: 3vh auto;
+        width: 20vw;
+        padding: 1rem;
+        font-size: 2rem;
+        border-radius: 0.5rem;
+        &.active{
+            background: linear-gradient(to right, rgba(0, 250, 250, 0.5), rgba(6, 255, 255, 0.9));
+            cursor: pointer;
+        }
+    }
+}

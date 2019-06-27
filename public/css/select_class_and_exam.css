@@ -1,0 +1,301 @@
+@charset "UTF-8";
+/*常规模块*/
+body,
+div,
+header,
+section,
+footer,
+span,
+img,
+ul,
+li,
+ol,
+p,
+a,
+button,
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0; }
+  body::selection,
+  div::selection,
+  header::selection,
+  section::selection,
+  footer::selection,
+  span::selection,
+  img::selection,
+  ul::selection,
+  li::selection,
+  ol::selection,
+  p::selection,
+  a::selection,
+  button::selection,
+  h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection {
+    background: transparent; }
+
+body {
+  overflow-x: hidden; }
+
+span,
+h1, h2, h3, h4, h5, h6, p, article {
+  cursor: default; }
+
+button {
+  border: none;
+  outline: none; }
+
+input, textarea {
+  outline: none; }
+
+/*下拉菜单样式*/
+.container {
+  width: 80%;
+  margin: 2vh auto;
+  position: relative; }
+  .container .select {
+    width: 15%;
+    height: 5vh;
+    display: inline-block;
+    position: relative; }
+    .container .select .item {
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+      text-align: center;
+      line-height: 5vh;
+      cursor: pointer; }
+    .container .select > .item:first-child {
+      border: 1px solid #ccc;
+      border-radius: 2.5rem; }
+    .container .select .option {
+      width: 70%;
+      margin-left: 5%;
+      padding: 0 10% 5%;
+      border-bottom-left-radius: 5%;
+      border-bottom-right-radius: 5%;
+      background: rgba(255, 255, 255, 0.4);
+      position: absolute;
+      height: 0;
+      opacity: 0;
+      transition: all 0.5s;
+      border: 1px solid #ccc;
+      top: 5vh;
+      left: 0;
+      border-top: none;
+      overflow: hidden;
+      z-index: 15;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      align-items: center; }
+      .container .select .option.active {
+        opacity: 100;
+        height: auto; }
+      .container .select .option .item:hover {
+        background-color: rgba(0, 0, 0, 0.2); }
+      .container .select .option .item + .item {
+        border-top: 1px solid #ccc; }
+  .container .btn {
+    width: 10%;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    font-size: 2.5vh;
+    line-height: 5vh;
+    margin-left: 1vw;
+    border-radius: 1vw;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.7);
+    opacity: 0.8; }
+    .container .btn.sub {
+      background-color: rgba(0, 255, 0, 0.5); }
+    .container .btn.reset {
+      background-color: #fff; }
+    .container .btn:hover {
+      opacity: 1; }
+  .container .bar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    list-style: none; }
+    .container .bar .item {
+      border: 1px solid #000;
+      line-height: 3vh;
+      font-size: 2vh;
+      float: right;
+      cursor: pointer;
+      padding: 0.5vw;
+      color: rgba(0, 0, 0, 0.7); }
+      .container .bar .item:first-child {
+        border-top-right-radius: 2vh;
+        border-bottom-right-radius: 2vh; }
+      .container .bar .item:last-child {
+        border-top-left-radius: 2vh;
+        border-bottom-left-radius: 2vh; }
+      .container .bar .item + .item {
+        border-right: none; }
+      .container .bar .item:hover {
+        background: rgba(0, 0, 0, 0.2); }
+
+/*商品栏样式*/
+.floor1-section {
+  width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start; }
+  .floor1-section .floor1-div {
+    width: 25vw;
+    margin-top: 3rem;
+    position: relative;
+    overflow: hidden; }
+    .floor1-section .floor1-div:not(:nth-child(3n)) {
+      margin-right: 2.5vw; }
+    .floor1-section .floor1-div img {
+      width: 100%;
+      cursor: pointer; }
+    .floor1-section .floor1-div .vip {
+      position: absolute;
+      top: 0;
+      left: -10%;
+      color: #FFFACD;
+      font: 2rem Helvetica bold;
+      transform: rotate(-45deg);
+      background: url("../img/class/VIP_bk.jpg");
+      width: 30%;
+      text-align: center; }
+    .floor1-section .floor1-div .info-parent {
+      border: 1px solid #eee; }
+      .floor1-section .floor1-div .info-parent .first {
+        display: block;
+        padding: 2rem;
+        border-bottom: 0.5px solid #eee;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden; }
+        .floor1-section .floor1-div .info-parent .first .title {
+          color: #666;
+          line-height: 4rem;
+          font-size: 1.2rem;
+          font-weight: bold;
+          cursor: pointer; }
+        .floor1-section .floor1-div .info-parent .first .assess {
+          color: #ccc;
+          font-size: 1.1rem;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-between;
+          position: relative; }
+          .floor1-section .floor1-div .info-parent .first .assess .assess-img {
+            position: absolute;
+            left: 0;
+            width: 35%;
+            height: 3vh;
+            background: url("../img/index/assess_img.png") no-repeat center center;
+            background-size: cover; }
+          .floor1-section .floor1-div .info-parent .first .assess .bg {
+            width: 17.5%;
+            height: 3vh;
+            background: rgba(255, 0, 13, 0.767);
+            z-index: 0; }
+      .floor1-section .floor1-div .info-parent .second {
+        height: 5vh;
+        margin: 2rem;
+        margin-right: 0;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: flex-start; }
+        .floor1-section .floor1-div .info-parent .second .buy, .floor1-section .floor1-div .info-parent .second .collect {
+          display: inline-block;
+          height: 51%;
+          padding-left: 1.5rem;
+          background: url("../img/index/num_img.png") no-repeat left 0%;
+          background-size: 130%; }
+        .floor1-section .floor1-div .info-parent .second .buy {
+          background-position-y: 10%; }
+        .floor1-section .floor1-div .info-parent .second .collect {
+          background-position-y: 85%; }
+        .floor1-section .floor1-div .info-parent .second .price {
+          width: 35%;
+          padding-left: 1rem;
+          padding-right: 1rem;
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem;
+          border-radius: 1.2rem;
+          font-size: 1.5rem;
+          line-height: 2rem;
+          color: white;
+          margin-right: 5%;
+          align-self: flex-end;
+          cursor: pointer;
+          background: rgba(0, 255, 255, 0.5);
+          transition: 0.5s; }
+          .floor1-section .floor1-div .info-parent .second .price:hover {
+            background: rgba(0, 255, 255, 0.8); }
+
+/*商品页面按钮*/
+.page-list {
+  width: 80%;
+  height: 5vh;
+  margin: 2.5vh auto; }
+  .page-list .listbar {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center; }
+    .page-list .listbar .item {
+      width: 5%;
+      height: 100%;
+      background: rgba(0, 255, 255, 0.5);
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer; }
+      .page-list .listbar .item:first-child {
+        border-top-left-radius: 2rem;
+        border-bottom-left-radius: 2rem; }
+      .page-list .listbar .item:last-child {
+        border-top-right-radius: 2rem;
+        border-bottom-right-radius: 2rem; }
+      .page-list .listbar .item:not(:first-child):not(:last-child) {
+        font-size: 2rem; }
+      .page-list .listbar .item + .item {
+        margin-left: 2.5%; }
+      .page-list .listbar .item.ban {
+        background: #ccc;
+        cursor: default;
+        color: aliceblue; }
+      .page-list .listbar .item.active {
+        border: 1px solid #000;
+        border-radius: 50%; }
+
+/*考试列表*/
+.exam-section {
+  width: 80vw;
+  margin: 3vh auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start; }
+  .exam-section .exam-div {
+    width: 22%; }
+    .exam-section .exam-div:not(:nth-child(4n)) {
+      margin-right: 3%; }
+    .exam-section .exam-div .img {
+      width: 100%;
+      height: 20vh; }
+    .exam-section .exam-div .span {
+      height: 10vh;
+      padding: 5%;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-around;
+      align-items: flex-start; }
+      .exam-section .exam-div .span .title {
+        font: 2rem 宋体 bolder;
+        color: #000; }
+      .exam-section .exam-div .span .number {
+        font: 1.2rem 宋体;
+        color: rgba(0, 0, 0, 0.9); }

@@ -1,0 +1,190 @@
+@charset "UTF-8";
+@import "normal";
+$global-color:#666 !default;
+$global-font-size:1rem !default;
+$row-height:#{$global-font-size*3} !default;
+$logo-font:#{$global-font-size*2.1} "Cooper Black",微软雅黑 !default;
+$second-background:rgba(96,96,96,0.3) !default;
+.double{
+    width: 100%;
+    white-space: nowrap;
+    background: #fff;
+    .first-row{
+        width: 80%;
+        margin: 0 auto;
+        font-size: $global-font-size*1.2;
+        line-height: $global-font-size*1.2;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        .logo{
+            width:30%;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            img{
+                width:40%;
+            }
+            .logo-font{
+                font:$logo-font;
+            }
+        }
+        .contact{
+            width: 60%;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            .phone,.email,.address{
+                width:30%;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-around;
+                align-items: center;
+                .img{
+                    width:3rem;
+                    height:3.5rem;
+                    border-radius: 50%;
+                    background: url("../img/header/header_img.jpg") no-repeat 0% 0% ;
+                    background-size: 9.5rem;
+                    transform: scale(1.2);
+                }
+                .font{
+                    width: 50%;
+                    display: flex;
+                    flex-flow: column wrap;
+                    color: $global-color;
+                    justify-content: center;
+                    align-items: flex-start;
+                }
+            }
+            .phone{
+                .img{
+                    background-position: 25% 50%;
+                }
+            }
+            .email{
+                .img{
+                    background-position: 70% 15%;
+                }
+            }
+            .address{
+                .img{
+                    background-position: 70% 50%;
+                }
+            }
+        }
+    }
+    .second-row{
+        padding:0 10%;
+        background: $second-background;
+        .nav{
+            width:100%;
+            height: 100%;
+            list-style: none;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: stretch;
+            li{
+                width: 20%;
+                a{
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+                    text-decoration: none;
+                    font-size: $global-font-size*1.5;
+                    line-height: $global-font-size*4;
+                    text-align: center;
+                    color: #000;
+                }
+                &:hover{
+                    background: $global-color;
+                    a{
+                        color:#fff;
+                    }
+                }
+            }
+        }
+    }
+    &.only{
+        z-index: 15;
+        padding: 0 10%;
+        display: flex;
+        flex-flow: row nowrap;
+        background: rgba(243, 239, 239,0.8);
+        opacity: 0.3;
+        box-sizing: border-box;
+        .first-row{
+            width: 20%;
+            margin: 0;
+            .logo{
+                img{
+                    width: 100%;
+                }
+                .logo-font{
+                    font-size: $global-font-size*1.5;
+                    cursor: pointer;
+                }
+            }
+            .contact{
+                display: none;
+            }
+        }
+        .second-row{
+            padding: 0;
+            width:80%;
+            background: transparent;
+        }
+        &:hover{
+            opacity: 1;
+        }
+    }
+    &.normal{
+        opacity: 1;
+        background:rgb(243, 239, 239);
+        .first-row{
+            .logo{
+                .logo-font{
+                    cursor: default;
+                }
+            } 
+        } 
+    }
+    &.fixed{
+        position: fixed;
+        z-index: 15;
+    }
+}
+/*网页主体头部文字*/
+.section-header{
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    .section-header-img,.section-header-div{
+        width: 100%;
+        height: 100%;
+    }
+    .section-header-div{
+        position: absolute;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-end;
+        align-items: flex-start;
+        top:0;
+        .section-header-title,.section-header-font{
+            color:#000;
+        }
+        .section-header-title{
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        .section-header-font{
+            font-size: 1.5rem;
+            + .section-header-font{
+                &::before{
+                    content: ">";
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,113 @@
+$vip-font:Helvetica;
+.floor1-section{
+    width:80vw;
+    margin: 0 auto;
+    display: flex;
+    flex-flow:row wrap; 
+    justify-content: flex-start;
+    .floor1-div{
+        width: 25vw;
+        margin-top:3rem;
+        position: relative;
+        overflow: hidden;
+        &:not(:nth-child(3n)){
+            margin-right: 2.5vw;
+        }
+        img{
+            width:100%;
+            cursor: pointer;
+        }
+        .vip{
+            position: absolute;
+            top: 0;
+            left: -10%;
+            color: #FFFACD;
+            font: 2rem $vip-font bold;
+            transform: rotate(-45deg);
+            background: url("../img/class/VIP_bk.jpg");
+            width: 30%;
+            text-align: center;
+        }
+        .info-parent{
+            border:1px solid #eee;
+            .first{
+                display: block;
+                padding:2rem;
+                border-bottom:0.5px solid #eee;
+                text-overflow: ellipsis;
+                white-space: nowrap; 
+                overflow: hidden;
+                .title{
+                    color: #666;
+                    line-height: 4rem;
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+                .assess{
+                    color: #ccc;
+                    font-size: 1.1rem;
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: space-between;
+                    position: relative;
+                    .assess-img{
+                        position: absolute;
+                        left: 0;
+                        width: 35%;
+                        height: 3vh;
+                        background: url("../img/index/assess_img.png") no-repeat center center;
+                        background-size: cover;
+                    }
+                    .bg{
+                        width: 17.5%;
+                        height: 3vh;
+                        background: rgba(255, 0, 13, 0.767);
+                        z-index: 0;
+                    } 
+                }
+            }
+            .second{
+                height: 5vh;
+                margin:2rem;
+                margin-right: 0;
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+                align-items: flex-start;
+                .buy,.collect{
+                    display: inline-block;
+                    height: 51%;
+                    padding-left:1.5rem;
+                    background: url("../img/index/num_img.png") no-repeat left 0%;
+                    background-size:130%; 
+                }
+                .buy{
+                    background-position-y: 10%;
+                }
+                .collect{
+                    background-position-y: 85%;
+                }
+                .price{
+                    width: 35%;
+                    padding-left:1rem;
+                    padding-right:1rem;
+                    padding-top:0.5rem;
+                    padding-bottom:0.5rem;
+                    border-radius: 1.2rem;
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                    color: rgb(255,255, 255);
+                    margin-right:5%; 
+                    align-self: flex-end;
+                    cursor: pointer;
+                    background:rgba(0,255,255,0.5);
+                    transition: 0.5s;
+                    &:hover{
+                        background:rgba(0,255,255,0.8);
+                    }
+                }
+            }
+        }
+    }
+}
