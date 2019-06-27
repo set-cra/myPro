@@ -6,8 +6,7 @@ const bodyparser=require("body-parser");
 const cors=require("cors");
 //获取pc端页面路由
 const info=require("./routes/info");
-//获取后台页面路由
-const backstage=require("./routes/backstage");
+
 //获取express-session来确定用户对象
 const expressSession = require("express-session");
 
@@ -22,7 +21,7 @@ console.log("listen 8088");
 
 //使用cors伪装解决跨域
 server.use(cors({
-    origin:['http://127.0.0.1:8080','http://localhost:8080'],
+    origin:"*",
     credentials:true
 }))
 
@@ -42,5 +41,3 @@ server.use(bodyparser.urlencoded({
 
 //挂载客户端页面路由
 server.use("/info",info);
-//挂载后台路由
-server.use("/backstage",backstage);

@@ -49,7 +49,7 @@ router.get("/index",(req,res)=>{
 //请求详细信息
 router.get("/content",(req,res)=>{
     let str;
-    console.log(req.query);
+    console.log(typeof req.query.e_id);
     if(req.query.e_id){
         str=`SELECT p_id,p_content,p_options,is_multi FROM problem WHERE e_id=${req.query.e_id}`;
     }else 
@@ -58,17 +58,14 @@ router.get("/content",(req,res)=>{
         }else if(req.query.n_id){
             str=`SELECT n_title,n_img,n_detail,n_date FROM news WHERE n_id=${req.query.n_id}`;
         }else{
+            console.log(404)
             res.send(404);
             return ;
         }
     pool.query(str,(err,result)=>{
         if(err) throw err;
-        res.writeHead(200,{
-            "Access-Control-Allow-Origin":"*",
-            "Content-Type":"Applaction/Json;Charset='UTF-8'"
-        })
-        res.write(JSON.stringify(result));
-        res.end();
+        console.log(result)
+        res.send(result);
     })
 })
 //请求题目答案

@@ -45,3 +45,32 @@ button {
 
 input, textarea {
   outline: none; }
+
+.info-section {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center; }
+  .info-section .info-box {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin: 15px; }
+    .info-section .info-box .info-text-box {
+      width: 40%;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-around; }
+      .info-section .info-box .info-text-box .info-title {
+        font-size: 2.5rem;
+        color: #e53; }
+      .info-section .info-box .info-text-box .info-price {
+        font-size: 1.5rem;
+        color: chocolate; }
+      .info-section .info-box .info-text-box .info-btn {
+        width: 10rem;
+        height: 5rem;
+        cursor: not-allowed; }

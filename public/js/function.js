@@ -546,3 +546,32 @@ function add_product(xhr, add_list, btn) {
         btn();
     }
 }
+//为课程列表添加跳转
+function class_detail(parent) {
+    parent.addEventListener("click", e => {
+        let child = e.target;
+        switch (child.nodeName) {
+            case "IMG": open(`./class_detail.html?c_id=${child.parentNode.getAttribute("data-class-id")}`, "_self"); break;
+            case "SPAN":
+                if (child.className == "title") {
+                    open(`./class_detail.html?c_id=${child.parentNode.parentNode.parentNode.getAttribute("data-class-id")}`, "_self");
+                }
+                break;
+            case "BUTTON":
+                if (child.className == "price") {
+                    open(`./class_detail.html?c_id=${child.parentNode.parentNode.parentNode.getAttribute("data-class-id")}`, "_self");
+                }
+                break;
+            default: return;
+        }
+    });
+}
+//课程跳转
+function to_class_detail(parent){
+    if (!parent) {     
+        //获取添加内容的父节点
+        let parent = document.querySelector("[data-list=list]");
+        //添加跳转点击按钮
+        class_detail(parent);
+    }
+};

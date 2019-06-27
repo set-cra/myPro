@@ -31,7 +31,7 @@ add_footer();
             child.innerHTML += `<div class="rotation-items ${i == 0 ? "active" : ""}">`
             for (let key of arr.slice(i, i + 2)) {
                 child.innerHTML += `
-                    <div class="people">
+                    <div class="people" data-class-id="${key.t_id}">
                         <div class="one" style="background-image:url('${key.t_img}')"></div>
                         <div class="font">
                             <span>“</span><br>
